@@ -3,6 +3,7 @@
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Diagnostics;
 
 namespace MauiExtensionBinding;
 
@@ -24,7 +25,6 @@ public partial class ExtensionModelViewModel : ObservableObject
         { 
             Status = StatusType.Inactive 
         };
-
     }
 
     public StatusType Status
@@ -35,6 +35,7 @@ public partial class ExtensionModelViewModel : ObservableObject
             SetProperty(_extensionModel.Status, value, _extensionModel, (model, newStatus) => model.Status = newStatus);
             OnPropertyChanged(nameof(Status));
             OnPropertyChanged(nameof(StatusColor));
+            OnPropertyChanged(nameof(this.StatusViewModelColor));
         }
     }
   
@@ -63,6 +64,7 @@ public partial class ExtensionModelViewModel : ObservableObject
         };
 
         // Optional: You could add more complex logic here, e.g., calling a service.
-        Console.WriteLine($"Status updated to: {StatusColor}");
+        Debug.WriteLine($"StatusColor updated to: {StatusColor}");
+        Debug.WriteLine($"StatusViewModelColor updated to: {this.StatusViewModelColor}");
     }
 }

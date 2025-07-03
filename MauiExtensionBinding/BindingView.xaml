@@ -4,25 +4,25 @@
              xmlns:vm="clr-namespace:MauiExtensionBinding;assembly=MauiExtensionBinding"  
              x:Class="MauiExtensionBinding.BindingView"   
              x:DataType="vm:ExtensionModelViewModel"
-             Title="BindingView">
-    <!-- Set the background color for the page -->
-    <ContentPage.Resources>
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="24" />
-            <Setter Property="HorizontalOptions" Value="Center" />
-            <Setter Property="VerticalOptions" Value="Center" />
-            <Setter Property="TextColor" Value="DarkBlue" />
-            <Setter Property="FontAttributes" Value="Bold" />
-        </Style>
-        <Style TargetType="Button">
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="Padding" Value="20,10" />
-            <Setter Property="CornerRadius" Value="10" />
-            <Setter Property="BackgroundColor" Value="#2196F3" />
-            <Setter Property="TextColor" Value="White" />
-            <Setter Property="Margin" Value="0,10,0,0" />
-        </Style>
-    </ContentPage.Resources>
+             Title="BindingView">  
+    <!-- Set the background color for the page -->  
+    <ContentPage.Resources>  
+        <Style TargetType="Label">  
+            <Setter Property="FontSize" Value="24" />  
+            <Setter Property="HorizontalOptions" Value="Center" />  
+            <Setter Property="VerticalOptions" Value="Center" />  
+            <Setter Property="TextColor" Value="DarkBlue" />  
+            <Setter Property="FontAttributes" Value="Bold" />  
+        </Style>  
+        <Style TargetType="Button">  
+            <Setter Property="FontSize" Value="18" />  
+            <Setter Property="Padding" Value="20,10" />  
+            <Setter Property="CornerRadius" Value="10" />  
+            <Setter Property="BackgroundColor" Value="#2196F3" />  
+            <Setter Property="TextColor" Value="White" />  
+            <Setter Property="Margin" Value="0,10,0,0" />  
+        </Style>  
+    </ContentPage.Resources>  
 
     <Grid RowDefinitions="*,Auto"  
           Padding="20"  
@@ -45,6 +45,10 @@
             <!-- Label to display the Status property from the ViewModel -->
             <!-- The Text property is bound to the Status property of the ViewModel. -->
             <Label Text="{Binding StatusColor}" />
+
+            <!-- Label to display the Status property from the ViewModel -->
+            <!-- The Text property is bound to the Status property of the ViewModel. -->
+            <Label Text="{Binding StatusViewModelColor}" />
 
         </VerticalStackLayout>
 

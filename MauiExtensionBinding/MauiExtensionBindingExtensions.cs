@@ -22,4 +22,21 @@ static public class MauiExtensionBindingExtensions
             }
         }
     }
+
+    extension(ExtensionModelViewModel model)
+    {
+        public string StatusViewModelColor
+        {
+            get
+            {
+                return model.Status switch
+                {
+                    StatusType.Active => "Green",
+                    StatusType.Inactive => "Gray",
+                    StatusType.Suspended => "Red",
+                    _ => throw new ArgumentOutOfRangeException()
+                };
+            }
+        }
+    }
 }
