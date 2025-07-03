@@ -38,17 +38,15 @@
                    FontSize="28"  
                    TextColor="Black" />
 
-            <!-- Label to display the Status property from the ViewModel -->
-            <!-- The Text property is bound to the Status property of the ViewModel. -->
+
             <Label Text="{Binding Status}" />
 
-            <!-- Label to display the Status property from the ViewModel -->
-            <!-- The Text property is bound to the Status property of the ViewModel. -->
             <Label Text="{Binding StatusColor}" />
 
-            <!-- Label to display the Status property from the ViewModel -->
-            <!-- The Text property is bound to the Status property of the ViewModel. -->
-            <Label Text="{Binding StatusViewModelColor}" />
+            <Label  Text="{Binding StatusViewModelColor}" />
+
+            <Label x:Name="lblStatusViewModelColor" Text="" />
+
 
         </VerticalStackLayout>
 

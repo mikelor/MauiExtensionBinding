@@ -36,10 +36,10 @@ public partial class ExtensionModelViewModel : ObservableObject
             OnPropertyChanged(nameof(Status));
             OnPropertyChanged(nameof(StatusColor));
             OnPropertyChanged(nameof(this.StatusViewModelColor));
+            //OnPropertyChanged(nameof(StatusViewModelColor)); //Compile Error: The name 'StatusViewModelColor' does not exist in the current context
         }
     }
-  
-    
+     
 
     public string StatusColor
     {
